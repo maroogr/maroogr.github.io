@@ -91,6 +91,10 @@
     .email-form textarea {
       resize: vertical;
     }
+    .email-form textarea::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+    .email-form button:hover {
     .email-form button {
       padding: 0.8rem 1.5rem;
       background: #FFFFFF;
@@ -116,14 +120,27 @@
       padding: 0;
       text-align: left;
     }
-    .reveal-message:hover {
+    .reveal-message {
       color: #FFFFFF;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: underline;
+      background: transparent !important;
+      border: none;
+      padding: 0;
+      text-align: left;
+      flex: 1;
+    }
+    .reveal-message:hover {
+      color: rgba(255,255,255,0.8);
     }
     .form-row {
       display: flex;
       align-items: center;
       gap: 1rem;
-      justify-content: center;
+    }
+    .submit-btn {
+      flex: 2;
     }
     .hidden {
       display: none;
@@ -240,11 +257,11 @@
       <p>Landlords interested in selling or entering long-term lettings agreements with an established property investment company.</p>
       <form class="email-form" id="contact-form">
         <input type="email" name="email" placeholder="Your email address" required>
+        <textarea name="message" id="message-field" class="hidden" rows="4" placeholder="Your message"></textarea>
         <div class="form-row">
           <button type="button" class="reveal-message" id="reveal-msg">Add a message</button>
-          <button type="submit">Contact Us</button>
+          <button type="submit" class="submit-btn">Contact Us</button>
         </div>
-        <textarea name="message" id="message-field" class="hidden" rows="4"></textarea>
       </form>
       <div id="thank-you" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 4px; margin-top: 1rem;">
         <h3 style="font-weight: normal; margin-bottom: 0.5rem;">Thank you for your interest</h3>
