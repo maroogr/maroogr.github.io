@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#722F37"/>
+  
+  <!-- Outer square - top and left only -->
+  <polyline points="24,488 24,24 488,24" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 2 -->
+  <polyline points="52,460 52,52 460,52" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 3 -->
+  <polyline points="80,432 80,80 432,80" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 4 -->
+  <polyline points="108,404 108,108 404,108" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 5 -->
+  <polyline points="136,376 136,136 376,136" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 6 -->
+  <polyline points="164,348 164,164 348,164" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 7 -->
+  <polyline points="192,320 192,192 320,192" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 8 -->
+  <polyline points="220,292 220,220 292,220" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Square 9 -->
+  <polyline points="248,264 248,248 264,248" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  
+  <!-- Diagonal lines - now extending into the top-left area -->
+  <line x1="24" y1="488" x2="488" y2="24" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="64" y1="488" x2="488" y2="64" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="104" y1="488" x2="488" y2="104" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="144" y1="488" x2="488" y2="144" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="184" y1="488" x2="488" y2="184" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="224" y1="488" x2="488" y2="224" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="264" y1="488" x2="488" y2="264" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="304" y1="488" x2="488" y2="304" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="344" y1="488" x2="488" y2="344" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="384" y1="488" x2="488" y2="384" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="424" y1="488" x2="488" y2="424" stroke="#FFFFFF" stroke-width="8"/>
+  <line x1="464" y1="488" x2="488" y2="464" stroke="#FFFFFF" stroke-width="8"/>
+</svg>
