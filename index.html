@@ -157,34 +157,6 @@
       font-size: 0.95rem;
       opacity: 0.8;
     }
-    .references {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.2);
-    }
-    .references h3 {
-      text-align: center;
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      font-weight: normal;
-      letter-spacing: 0.2em;
-    }
-    .reference {
-      background: rgba(255,255,255,0.05);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 4px;
-      border-left: 3px solid rgba(255,255,255,0.3);
-    }
-    .reference p {
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-    .reference cite {
-      font-style: normal;
-      opacity: 0.8;
-      font-size: 0.9rem;
-    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -200,6 +172,67 @@
       font-size: 0.85rem;
       opacity: 0.7;
       margin-top: 0.5rem;
+    }
+    .credentials {
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 2rem;
+      border-radius: 4px;
+      margin: 3rem 0 2rem 0;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .credential-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      min-width: 250px;
+    }
+    .credential-item img {
+      height: 70px;
+      width: auto;
+      flex-shrink: 0;
+    }
+    .credential-content {
+      flex: 1;
+    }
+    .credential-content a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 0.25rem;
+      transition: opacity 0.2s;
+    }
+    .credential-content a:hover {
+      opacity: 0.8;
+    }
+    .credential-meta {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+    .pims-badge {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+    .pims-badge img {
+      height: 50px;
+      width: auto;
+    }
+    .pims-badge a {
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .pims-badge a:hover {
+      opacity: 0.8;
     }
     @media (max-width: 600px) {
       .company-name {
@@ -243,6 +276,25 @@
       </div>
     </section>
 
+    <section class="credentials">
+      <div class="credential-item">
+        <img src="pims-logo.png" alt="PIMS Logo">
+        <div class="credential-content">
+          <a href="https://www.thepims.co.uk/" target="_blank" rel="noopener noreferrer">PIMS Registered Member</a>
+          <div class="credential-meta">Membership #137545</div>
+          <div style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.5rem; font-style: italic;">Independently verified & regulated professional</div>
+        </div>
+      </div>
+      <div class="credential-item">
+        <img src="cpd-logo.svg" alt="CPD Certified Logo">
+        <div class="credential-content">
+          <a href="https://thecpdregister.com/providers/cpd-group-providers--782537" target="_blank" rel="noopener noreferrer">CPD Certified Professional</a>
+          <div class="credential-meta">The CPD Group • Provider #782537</div>
+          <div style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.5rem; font-style: italic;">Completed advanced professional training</div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <h3>Partner With Us</h3>
       <p>Landlords interested in selling or entering long-term lettings agreements with an established property investment company.</p>
@@ -260,21 +312,6 @@
       </div>
     </section>
 
-    <section class="references">
-      <h3>Landlord Partnerships</h3>
-      <div class="reference">
-        <p>"Maroogr has proven to be a reliable partner. Professional conduct, consistent payments, and excellent communication throughout our agreement."</p>
-        <cite>— Property Owner, London</cite>
-      </div>
-      <div class="reference">
-        <p>"Our long-term arrangement with Maroogr has exceeded expectations. A professional company that understands the property market."</p>
-        <cite>— Landlord, Manchester</cite>
-      </div>
-      <div class="reference">
-        <p>"We required a serious, established investor for our portfolio. Maroogr delivered professionalism and reliability from day one."</p>
-        <cite>— Property Portfolio Owner, Birmingham</cite>
-      </div>
-    </section>
   </main>
 
   <footer>

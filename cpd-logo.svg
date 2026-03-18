@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+
+  <!-- CPD text -->
+  <text x="100" y="115" font-family="Georgia, serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">CPD</text>
+
+  <!-- Certified text -->
+  <text x="100" y="145" font-family="Georgia, serif" font-size="14" text-anchor="middle" fill="white" letter-spacing="2">CERTIFIED</text>
+</svg>
