@@ -72,7 +72,7 @@
     }
     .hero {
       text-align: center;
-      padding: 3rem 0;
+      padding: 2rem 0 2.5rem 0;
     }
     .hero h2 {
       font-family: 'Playfair Display', serif;
@@ -91,7 +91,7 @@
       border: 1px solid rgba(201,169,110,0.3);
       padding: 2.5rem;
       border-radius: 4px;
-      margin: 2rem 0;
+      margin: 1.5rem 0 3.5rem 0;
       text-align: center;
       color: #333333;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -177,7 +177,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
-      margin: 3rem 0;
+      margin: 2.5rem 0;
     }
     .benefit {
       text-align: center;
@@ -209,7 +209,7 @@
       font-size: 0.9rem;
       color: #666666;
       border-top: 1px solid rgba(201,169,110,0.3);
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       background-color: #FAF6F0;
     }
     .registered {
@@ -225,7 +225,7 @@
       border: 2px solid rgba(201,169,110,0.4);
       padding: 2rem;
       border-radius: 4px;
-      margin: 3rem 0 2rem 0;
+      margin: 2.5rem 0;
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
@@ -320,18 +320,37 @@
       <p>We acquire and manage residential properties for long-term investment, providing landlords with reliable, hassle-free returns and peace of mind.</p>
     </section>
 
+    <section class="cta-section">
+      <h3>Let's chat.</h3>
+      <p>Whether you're a property owner looking for reliable returns, or a fellow investor exploring opportunities, we'd like to hear from you. Get in touch and let's discuss how we can work together.</p>
+      <form class="email-form" id="contact-form">
+        <input type="email" name="email" placeholder="Your email address" required pattern="[^@]+@[^@]+\.[^@]+">
+        <textarea name="message" id="message-field" class="hidden" rows="4" placeholder="Your message"></textarea>
+        <div class="form-row">
+          <button type="button" class="reveal-message" id="reveal-msg">Add a message</button>
+          <button type="submit" class="submit-btn">Contact Us</button>
+        </div>
+      </form>
+      <div id="thank-you" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 4px; margin-top: 1rem;">
+        <h3 style="font-weight: normal; margin-bottom: 0.5rem;">Thank you for your interest</h3>
+        <p style="opacity: 0.8;">We'll be in touch shortly.</p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center; margin-bottom: 0.5rem; color: #722F37; font-family: 'Inter', sans-serif; font-size: 1.3rem; font-weight: 400;">Why should you work with us?</h2>
+
     <section class="benefits">
       <div class="benefit">
         <h4>Reliable Returns</h4>
-        <p>Guaranteed rental income with professional property management.</p>
+        <p>Rent your property to us and receive consistent payments each month. We handle the rest.</p>
       </div>
       <div class="benefit">
-        <h4>Property Management</h4>
-        <p>Full handling of tenant relations, maintenance, and compliance.</p>
+        <h4>Full Operations</h4>
+        <p>We handle all guest management, bookings, maintenance, and day-to-day operations. Your property is fully managed while you retain ownership.</p>
       </div>
       <div class="benefit">
         <h4>Long-Term Partnerships</h4>
-        <p>Stable, extended agreements for lasting landlord relationships.</p>
+        <p>We build stable, lasting relationships with property owners. You own the property, we operate it professionally and reliably.</p>
       </div>
     </section>
 
@@ -351,23 +370,6 @@
           <div class="credential-meta">The CPD Group • Provider #782537</div>
           <div style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.5rem; font-style: italic;">Completed advanced professional training</div>
         </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <h3>Partner With Us</h3>
-      <p>Landlords interested in selling or entering long-term lettings agreements with an established property investment company.</p>
-      <form class="email-form" id="contact-form">
-        <input type="email" name="email" placeholder="Your email address" required pattern="[^@]+@[^@]+\.[^@]+">
-        <textarea name="message" id="message-field" class="hidden" rows="4" placeholder="Your message"></textarea>
-        <div class="form-row">
-          <button type="button" class="reveal-message" id="reveal-msg">Add a message</button>
-          <button type="submit" class="submit-btn">Contact Us</button>
-        </div>
-      </form>
-      <div id="thank-you" style="display: none; text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 4px; margin-top: 1rem;">
-        <h3 style="font-weight: normal; margin-bottom: 0.5rem;">Thank you for your interest</h3>
-        <p style="opacity: 0.8;">We'll be in touch shortly.</p>
       </div>
     </section>
 
