@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maroogr – Company Let & Guaranteed Rent Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red:    #722F37;
+      --red2:   #8B3A44;
+      --gold:   #C9A96E;
+      --cream:  #FAF6F0;
+      --text:   #2E2E2E;
+      --muted:  #666;
+      --border: rgba(201,169,110,0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #e8e0d8;
+      color: var(--text);
+      font-size: 9.5pt;
+      line-height: 1.55;
+    }
+
+    /* ── A4 page shell ── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 12mm auto;
+      background: var(--cream);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+    }
+    .page + .page {
+      margin-top: 16mm;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red2) 100%);
+      color: #fff;
+      padding: 10mm 12mm 8mm;
+      display: flex;
+      align-items: center;
+      gap: 6mm;
+    }
+    .header-logo {
+      width: 18mm;
+      height: 18mm;
+      flex-shrink: 0;
+    }
+    .header-text {}
+    .header-company {
+      font-family: 'Playfair Display', serif;
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .header-tagline {
+      margin-top: 2mm;
+      font-size: 9pt;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+
+    /* ── CONTACT STRIP ── */
+    .contact-strip {
+      background: #2C1B1F;
+      color: rgba(255,255,255,0.85);
+      padding: 2.5mm 12mm;
+      display: flex;
+      gap: 7mm;
+      font-size: 8pt;
+      letter-spacing: 0.04em;
+      align-items: center;
+    }
+    .contact-strip span { display: flex; align-items: center; gap: 2mm; }
+    .contact-strip .icon { color: var(--gold); font-style: normal; font-size: 9pt; }
+
+    /* ── GOLD RULE ── */
+    .gold-rule {
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    /* ── MAIN BODY ── */
+    .body {
+      padding: 8mm 12mm 6mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6mm;
+    }
+
+    /* intro */
+    .intro {
+      text-align: center;
+      padding: 3mm 10mm;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6mm;
+    }
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 13pt;
+      font-weight: 400;
+      color: var(--red);
+      margin-bottom: 2mm;
+    }
+    .intro p { color: var(--muted); font-size: 9pt; max-width: 130mm; margin: 0 auto; }
+
+    /* section headings */
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 11pt;
+      font-weight: 400;
+      color: var(--red);
+      margin-bottom: 3mm;
+      padding-bottom: 1.5mm;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* how it works */
+    .steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5mm;
+    }
+    .steps li {
+      display: flex;
+      align-items: baseline;
+      gap: 3mm;
+      font-size: 9pt;
+    }
+    .steps li::before {
+      content: counter(step);
+      counter-increment: step;
+      background: var(--red);
+      color: #fff;
+      font-size: 7pt;
+      font-weight: 600;
+      width: 5mm;
+      height: 5mm;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.5mm;
+    }
+    .steps { counter-reset: step; }
+
+    /* benefits grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3mm;
+    }
+    .benefit-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 3.5mm 4mm;
+    }
+    .benefit-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 9.5pt;
+      font-weight: 400;
+      color: var(--red);
+      margin-bottom: 1.5mm;
+    }
+    .benefit-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1mm;
+    }
+    .benefit-card ul li {
+      font-size: 8.5pt;
+      color: var(--muted);
+      padding-left: 3.5mm;
+      position: relative;
+    }
+    .benefit-card ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    /* who stays */
+    .who-stays ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5mm;
+    }
+    .who-stays ul li {
+      font-size: 9pt;
+      padding-left: 4mm;
+      position: relative;
+      color: var(--text);
+    }
+    .who-stays ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 8pt;
+    }
+
+    /* two-column layout for responsibilities + compliance */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    /* responsibilities table */
+    .responsibilities table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+    }
+    .responsibilities th {
+      background: var(--red);
+      color: #fff;
+      padding: 2mm 3mm;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      font-size: 8pt;
+    }
+    .responsibilities td {
+      padding: 1.5mm 3mm;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+      color: var(--muted);
+      font-size: 8pt;
+    }
+    .responsibilities tr:last-child td { border-bottom: none; }
+    .responsibilities td:not(:empty)::before {
+      content: '–  ';
+      color: var(--gold);
+    }
+
+    /* compliance */
+    .compliance {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 3.5mm 4mm;
+      font-size: 8.5pt;
+      color: var(--muted);
+      line-height: 1.6;
+      border-radius: 0 2px 2px 0;
+    }
+    .compliance p + p { margin-top: 2mm; }
+    .compliance strong { color: var(--text); }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red2) 100%);
+      color: #fff;
+      padding: 6mm 12mm;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10mm;
+    }
+    .footer-cta {
+      flex: 1;
+    }
+    .footer-contact {
+      flex: 0 0 auto;
+    }
+    .footer-cta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 12pt;
+      font-weight: 400;
+      margin-bottom: 1.5mm;
+    }
+    .footer-cta p {
+      font-size: 8.5pt;
+      color: rgba(255,255,255,0.75);
+    }
+    .footer-contact {
+      text-align: right;
+      font-size: 8.5pt;
+      line-height: 1.8;
+    }
+    .footer-contact a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .footer-pims {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3mm;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 2px;
+      padding: 2.5mm 4mm;
+    }
+    .footer-pims img {
+      height: 11mm;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+    }
+    .footer-pims-text {
+      font-size: 7.5pt;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+    .footer-pims-text strong {
+      display: block;
+      font-size: 8pt;
+      color: #fff;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        background: var(--cream);
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 297mm;
+        overflow: hidden;
+        break-after: page;
+      }
+      .page:last-child {
+        break-after: auto;
+      }
+      .body {
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <img class="header-logo"
+         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9IiM3MjJGMzciLz4KICAKICA8IS0tIE91dGVyIHNxdWFyZSAtIHRvcCBhbmQgbGVmdCBvbmx5IC0tPgogIDxwb2x5bGluZSBwb2ludHM9IjI0LDQ4OCAyNCwyNCA0ODgsMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgCiAgPCEtLSBTcXVhcmUgMiAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSI1Miw0NjAgNTIsNTIgNDYwLDUyIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIAogIDwhLS0gU3F1YXJlIDMgLS0+CiAgPHBvbHlsaW5lIHBvaW50cz0iODAsNDMyIDgwLDgwIDQzMiw4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjgiLz4KICAKICA8IS0tIFNxdWFyZSA0IC0tPgogIDxwb2x5bGluZSBwb2ludHM9IjEwOCw0MDQgMTA4LDEwOCA0MDQsMTA4IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIAogIDwhLS0gU3F1YXJlIDUgLS0+CiAgPHBvbHlsaW5lIHBvaW50cz0iMTM2LDM3NiAxMzYsMTM2IDM3NiwxMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgCiAgPCEtLSBTcXVhcmUgNiAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIxNjQsMzQ4IDE2NCwxNjQgMzQ4LDE2NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjgiLz4KICAKICA8IS0tIFNxdWFyZSA3IC0tPgogIDxwb2x5bGluZSBwb2ludHM9IjE5MiwzMjAgMTkyLDE5MiAzMjAsMTkyIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIAogIDwhLS0gU3F1YXJlIDggLS0+CiAgPHBvbHlsaW5lIHBvaW50cz0iMjIwLDI5MiAyMjAsMjIwIDI5MiwyMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgCiAgPCEtLSBTcXVhcmUgOSAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIyNDgsMjY0IDI0OCwyNDggMjY0LDI0OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjgiLz4KICAKICA8IS0tIERpYWdvbmFsIGxpbmVzIC0gbm93IGV4dGVuZGluZyBpbnRvIHRoZSB0b3AtbGVmdCBhcmVhIC0tPgogIDxsaW5lIHgxPSIyNCIgeTE9IjQ4OCIgeDI9IjQ4OCIgeTI9IjI0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSI2NCIgeTE9IjQ4OCIgeDI9IjQ4OCIgeTI9IjY0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSIxMDQiIHkxPSI0ODgiIHgyPSI0ODgiIHkyPSIxMDQiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPGxpbmUgeDE9IjE0NCIgeTE9IjQ4OCIgeDI9IjQ4OCIgeTI9IjE0NCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8bGluZSB4MT0iMTg0IiB5MT0iNDg4IiB4Mj0iNDg4IiB5Mj0iMTg0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSIyMjQiIHkxPSI0ODgiIHgyPSI0ODgiIHkyPSIyMjQiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPGxpbmUgeDE9IjI2NCIgeTE9IjQ4OCIgeDI9IjQ4OCIgeTI9IjI2NCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8bGluZSB4MT0iMzA0IiB5MT0iNDg4IiB4Mj0iNDg4IiB5Mj0iMzA0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSIzNDQiIHkxPSI0ODgiIHgyPSI0ODgiIHkyPSIzNDQiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPGxpbmUgeDE9IjM4NCIgeTE9IjQ4OCIgeDI9IjQ4OCIgeTI9IjM4NCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8bGluZSB4MT0iNDI0IiB5MT0iNDg4IiB4Mj0iNDg4IiB5Mj0iNDI0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSI0NjQiIHkxPSI0ODgiIHgyPSI0ODgiIHkyPSI0NjQiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+Cjwvc3ZnPg=="
+         alt="Maroogr">
+    <div class="header-text">
+      <div class="header-company">Maroogr</div>
+      <div class="header-tagline">Company Let &amp; Guaranteed Rent Service</div>
+    </div>
+  </header>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <span><i class="icon">T</i> 07983 979 018</span>
+    <span><i class="icon">E</i> dipunm@proton.me</span>
+    <span><i class="icon">W</i> maroogr.com</span>
+  </div>
+
+  <div class="gold-rule"></div>
+
+  <!-- BODY -->
+  <main class="body">
+
+    <!-- INTRO -->
+    <section class="intro">
+      <h2>Guaranteed Rent. Zero Hassle.</h2>
+      <p>We rent your property on a long-term basis, pay you a fixed rent every month, and host vetted short- to mid-term guests — primarily working professionals and contractors. You receive a guaranteed income while we handle everything else.</p>
+    </section>
+
+    <!-- HOW IT WORKS + WHO STAYS (side by side) -->
+    <div class="two-col">
+
+      <section>
+        <h3 class="section-heading">How It Works</h3>
+        <ol class="steps">
+          <li>You grant us a company let agreement for an agreed term (typically 3–5 years).</li>
+          <li>We pay you a fixed monthly rent, whether the property is occupied or not.</li>
+          <li>We look after the property, its security, access, and keep it to a high standard for our guests.</li>
+          <li>We deal with maintenance issues up to £300 per issue before involving you.</li>
+        </ol>
+      </section>
+
+      <section class="who-stays">
+        <h3 class="section-heading">Who Stays In The Property?</h3>
+        <ul>
+          <li>Working professionals, contractors and corporate guests on short- to mid-term stays.</li>
+          <li>No nuisance guests or parties — we maintain strict house rules for all stays.</li>
+          <li>All guests are vetted before arrival and must agree to our strict house rules.</li>
+          <li>Guests are held fully accountable for damage or rule breaches.</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- BENEFITS -->
+    <section>
+      <h3 class="section-heading">Benefits For You</h3>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h4>Guaranteed Rent</h4>
+          <ul>
+            <li>A fixed rent, paid on time every month for the full term, regardless of whether the property is occupied.</li>
+            <li>No tenant turnover or empty periods affecting your income.</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>Hands-Off</h4>
+          <ul>
+            <li>We take on full responsibility for the property. You do not need to be involved in day-to-day decisions.</li>
+            <li>No calls, no sourcing tradespeople, no managing check-ins or complaints.</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>Property Looked After</h4>
+          <ul>
+            <li>We have a direct interest in keeping the property in good condition; it is how we operate our business.</li>
+            <li>Regular cleaning and maintenance is handled by us, at our cost.</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>No Fees</h4>
+          <ul>
+            <li>You receive the full agreed rent every month, with nothing deducted.</li>
+            <li>We do not charge management fees, percentages, or any other deductions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER PAGE 1 -->
+  <footer class="footer">
+    <div class="footer-cta">
+      <h3>Get In Touch</h3>
+      <p>We are happy to arrange a call or visit to discuss your property and answer any questions.</p>
+    </div>
+    <div class="footer-pims">
+      <img src="pims-logo.png" alt="PIMS" title="PIMS Member #137545">
+      <div class="footer-pims-text">
+        <strong>PIMS Member</strong>
+        Dispute Resolution Scheme<br>
+        Membership #137545
+      </div>
+    </div>
+    <div class="footer-contact">
+      <strong style="font-size:9.5pt;">Dipun Mistry</strong><br>
+      07983 979 018<br>
+      <a href="mailto:dipunm@proton.me">dipunm@proton.me</a><br>
+      <a href="https://maroogr.com">maroogr.com</a>
+    </div>
+  </footer>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+
+  <main class="body">
+
+    <section class="responsibilities">
+      <h3 class="section-heading">Responsibilities at a Glance</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Landlord</th>
+            <th>Maroogr</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maintain building insurance &amp; mortgage as normal</td>
+            <td>Pay the agreed rent on time every month</td>
+          </tr>
+          <tr>
+            <td>Cover major structural works (roof, boiler replacement, etc.)</td>
+            <td>Cover utilities and council tax during the term</td>
+          </tr>
+          <tr>
+            <td>Approve any material changes to the property</td>
+            <td>Manage all guests, cleaners and day-to-day issues</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cover repairs up to £300 per issue</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Keep the property clean and well presented</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h3 class="section-heading">Compliance &amp; Professionalism</h3>
+      <div class="compliance">
+        <p>Maroogr operates as a professional accommodation provider and meets all relevant legal and safety requirements for the properties we manage. We work exclusively with qualified tradespeople and trusted cleaning contractors.</p>
+        <p>You are welcome to review our agreement in full and seek independent legal advice before committing — we encourage it.</p>
+        <p>We are members of <strong>PIMS</strong>, a dispute resolution scheme for rent-to-rent operators <strong>(membership no. 137545)</strong>, providing you with additional protection and peace of mind.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER PAGE 2 -->
+  <footer class="footer">
+    <div class="footer-cta">
+      <h3>Get In Touch</h3>
+      <p>We are happy to arrange a call or visit to discuss your property and answer any questions.</p>
+    </div>
+    <div class="footer-pims">
+      <img src="pims-logo.png" alt="PIMS" title="PIMS Member #137545">
+      <div class="footer-pims-text">
+        <strong>PIMS Member</strong>
+        Dispute Resolution Scheme<br>
+        Membership #137545
+      </div>
+    </div>
+    <div class="footer-contact">
+      <strong style="font-size:9.5pt;">Dipun Mistry</strong><br>
+      07983 979 018<br>
+      <a href="mailto:dipunm@proton.me">dipunm@proton.me</a><br>
+      <a href="https://maroogr.com">maroogr.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
