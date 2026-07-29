@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Deal Snapshots | Maroogr</title>
+  <meta name="description" content="Maroogr deal snapshots - modelled figures for properties under review.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAF6F0;
+      color: #333333;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+    header {
+      background: linear-gradient(135deg, #722F37 0%, #8B3A44 100%);
+      color: #FFFFFF;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    header > div {
+      max-width: 1000px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    header a {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+    .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      color: #333333;
+    }
+    .page-heading {
+      text-align: center;
+      padding-bottom: 2.5rem;
+    }
+    .page-heading h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: #722F37;
+      margin-bottom: 0.75rem;
+    }
+    .page-heading p {
+      font-size: 1.05rem;
+      color: #555555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .deal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .deal-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+      border: 1px solid rgba(201,169,110,0.4);
+      border-radius: 4px;
+      background: #FAFAFA;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      text-decoration: none;
+      color: #333333;
+      transition: all 0.3s ease;
+    }
+    .deal-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+    }
+    .deal-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: #722F37;
+      margin-bottom: 0.25rem;
+    }
+    .deal-card-meta {
+      font-size: 0.85rem;
+      color: #666666;
+    }
+    .deal-card-rent {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #C9A96E;
+      white-space: nowrap;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666666;
+      border-top: 1px solid rgba(201,169,110,0.3);
+      margin-top: 2.5rem;
+      background-color: #FAF6F0;
+    }
+    @media (max-width: 600px) {
+      .company-name {
+        font-size: 1.3rem;
+        letter-spacing: 0.2em;
+      }
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+      .deal-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="../index.html">
+        <img src="../logo.svg" alt="Maroogr" class="logo">
+        <span class="company-name">Maroogr</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <h1>Deal Snapshots</h1>
+      <p>Modelled figures for properties currently under review.</p>
+    </section>
+
+    <section class="deal-list">
+      <a class="deal-card" href="../snapshots/pioneer-way-wd18-1000/">
+        <div>
+          <div class="deal-card-title">Pioneer Way, Watford, WD18</div>
+          <div class="deal-card-meta">Scenario: modelled max rent ~£1,000</div>
+        </div>
+        <div class="deal-card-rent">~£1,000</div>
+      </a>
+
+      <a class="deal-card" href="../snapshots/pioneer-way-wd18-1200/">
+        <div>
+          <div class="deal-card-title">Pioneer Way, Watford, WD18</div>
+          <div class="deal-card-meta">Scenario: modelled max rent ~£1,200</div>
+        </div>
+        <div class="deal-card-rent">~£1,200</div>
+      </a>
+
+      <a class="deal-card" href="../snapshots/pioneer-way-wd18-1425/">
+        <div>
+          <div class="deal-card-title">Pioneer Way, Watford, WD18</div>
+          <div class="deal-card-meta">Scenario: modelled max rent ~£1,425</div>
+        </div>
+        <div class="deal-card-rent">~£1,425</div>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Maroogr. All rights reserved.</p>
+  </footer>
+</body>
+</html>
